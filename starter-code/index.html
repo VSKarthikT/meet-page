@@ -27,7 +27,7 @@
       />
     </header>
     <main class="">
-      <div class="pt-16">
+      <div class="lg:hidden pt-16">
         <img
           class="w-full object-cover"
           src="/starter-code/assets/tablet/image-hero.png"
@@ -35,38 +35,65 @@
         />
       </div>
 
-      <section class="grid auto-cols-auto auto-rows-auto gap-6 px-8">
-        <div class="grid auto-cols-auto auto-rows-auto pt-12">
-          <h1 class="text-preset1mob text-center">Group Chat for Everyone</h1>
-          <p class="pt-6 text-preset4tab text-slate600 text-center">
-            Meet makes it easy to connect with others face-to-face virtually and
-            collaborate across any device.
-          </p>
+      <section
+        class="flex flex-col lg:flex-row lg:gap-8 justify-center items-center gap-6 px-8"
+      >
+        <div class="hidden lg:block pt-16">
+          <img
+            class="w-full object-cover -ml-10"
+            src="/starter-code/assets/desktop/image-hero-left.png"
+            alt=""
+          />
         </div>
-        <div class="grid auto-cols-auto auto-rows-auto">
-          <div
-            class="flex flex-col justify-center items-center gap-4 md:flex-row"
-          >
-            <a
-              class="text-preset5 text-white bg-cyan600 px-10 py-4 rounded-[29px]"
-              href=""
+        <div class="flex flex-col justify-center items-center gap-6">
+          <div class="flex flex-col pt-12">
+            <h1 class="text-preset1mob lg:text-preset1 text-center">
+              Group Chat for Everyone
+            </h1>
+            <p
+              class="pt-6 lg:text-preset4 text-preset4tab text-slate600 text-center"
             >
-              Download v1.3
-            </a>
-            <a
-              class="text-preset5 text-white bg-Purple600 px-10 py-4 rounded-[29px]"
-              href=""
-            >
-              What is it?
-            </a>
+              Meet makes it easy to connect with others face-to-face virtually
+              and collaborate across any device.
+            </p>
           </div>
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="flex flex-col justify-center items-center gap-4 md:flex-row"
+            >
+              <a
+                class="hover:cursor-pointer hover:bg-cyan300 bg- text-preset5 text-white bg-cyan600 px-10 py-4 rounded-[29px]"
+                href=""
+              >
+                Download v1.3
+              </a>
+              <a
+                class="hover:cursor-pointer hover:bg-[#B18BDD] text-preset5 text-white bg-Purple600 px-10 py-4 rounded-[29px]"
+                href=""
+              >
+                What is it?
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:block pt-16 -mr-10">
+          <img
+            class="w-full object-cover"
+            src="/starter-code/assets/desktop/image-hero-right.png"
+            alt=""
+          />
         </div>
       </section>
 
       <section class="grid auto-cols-auto auto-rows-auto gap-16 pb-16 px-8">
         <div class="flex flex-col justify-center items-center pt-8">
-          <div class="w-px h-12 bg-black mb-1"></div>
-          <p>01</p>
+          <div class="w-px h-20 bg-slate300"></div>
+          <p
+            class="w-10 h-10 border border-slate300 text-slate600 flex justify-center items-center rounded-full"
+          >
+            01
+          </p>
         </div>
 
         <div
@@ -94,13 +121,19 @@
           />
         </div>
         <div class="grid auto-cols-auto auto-rows-auto">
-          <p class="text-center text-preset3mob uppercase text-cyan600">
+          <p
+            class="text-center lg:text-preset3 md:text-preset3tab text-preset3mob uppercase text-cyan600"
+          >
             Built for modern use
           </p>
-          <h2 class="pt-4 text-center text-preset2mob text-slate900">
+          <h2
+            class="pt-4 text-center text-preset2mob md:text-preset2tab lg:text-preset2 text-slate900"
+          >
             Smarter meetings, all in one place
           </h2>
-          <p class="pt-8 text-center text-preset4tab text-slate600">
+          <p
+            class="pt-8 text-center lg:text-preset4 text-preset4tab text-slate600"
+          >
             Send messages, share files, show your screen, and record your
             meetings — all in one workspace. Control who can join with
             invite-only team access, data encryption, and data export.
@@ -108,13 +141,23 @@
         </div>
       </section>
 
-      <footer class="grid auto-cols-auto auto-rows-auto text-white">
+      <footer class="relative grid auto-cols-auto auto-rows-auto text-white">
+        <div class="z-10 flex flex-col justify-center items-center pt-8">
+          <div class="w-px h-20 bg-slate300"></div>
+          <p
+            class="text-preset5 absolute bottom-[74%] w-10 h-10 border border-slate300 bg-white text-slate600 flex justify-center items-center rounded-full translate-y-1/2"
+          >
+            02
+          </p>
+        </div>
         <div
-          class="pb-16 relative bg-no-repeat bg-cover bg-center bg-[url('/starter-code/assets/mobile/image-footer.jpg')] bg-blend-overlay md:bg-[url(/starter-code/assets/tablet/image-footer.jpg)] flex flex-col justify-center items-center gap-6"
+          class="pb-16 relative bg-no-repeat bg-cover bg-center bg-[url('/starter-code/assets/mobile/image-footer.jpg')] bg-blend-overlay md:bg-[url(/starter-code/assets/tablet/image-footer.jpg)] lg:bg-[url(/starter-code/assets/desktop/image-footer.jpg)] flex flex-col justify-center items-center gap-6"
         >
           <div class="absolute inset-0 bg-cyan600 opacity-85"></div>
 
-          <h3 class="pt-16 text-center relative text-preset2mob">
+          <h3
+            class="pt-16 text-center relative md:text-preset2tab lg:text-preset2 text-preset2mob"
+          >
             Experience more together
           </h3>
           <p class="text-center relative text-preset4tab">
@@ -122,7 +165,7 @@
             and group video sessions.
           </p>
           <a
-            class="text-center relative text-preset5 bg-Purple600 px-10 py-4 rounded-[29px]"
+            class="hover:cursor-pointer hover:bg-[#B18BDD] text-center relative text-preset5 bg-Purple600 px-10 py-4 rounded-[29px]"
             href=""
           >
             Download v1.3</a
